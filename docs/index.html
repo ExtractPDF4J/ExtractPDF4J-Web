@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExtractPDF4J Docs</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <header>
+    <h1>ExtractPDF4J Documentation</h1>
+    <a class="btn" href="../index.html">⬅ Back to Home</a>
+  </header>
+
+  <section>
+    <h2>Installation</h2>
+    <p>Add ExtractPDF4J to your Maven/Gradle project:</p>
+    <pre>
+Maven:
+&lt;dependency&gt;
+  &lt;groupId&gt;com.extractpdf4j&lt;/groupId&gt;
+  &lt;artifactId&gt;extractpdf4j&lt;/artifactId&gt;
+  &lt;version&gt;1.0.0&lt;/version&gt;
+&lt;/dependency&gt;
+
+Gradle:
+implementation 'com.extractpdf4j:extractpdf4j:1.0.0'
+    </pre>
+  </section>
+
+  <section>
+    <h2>Usage Example</h2>
+    <pre>
+PdfHandler handler = new PdfHandler("sample.pdf");
+List<Table> tables = handler.parse("lattice");
+
+for (Table t : tables) {
+    System.out.println(t.toCsv());
+}
+    </pre>
+  </section>
+
+  <section>
+    <h2>Contributing</h2>
+    <p>We welcome contributions! Fork the repo, open issues, and raise PRs 🚀</p>
+  </section>
+
+  <footer>
+    <p>ExtractPDF4J © 2025 | Apache License 2.0</p>
+  </footer>
+</body>
+</html>
